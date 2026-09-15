@@ -1,0 +1,30 @@
+{
+  "schema": "meaw.component/v1",
+  "name": "openclaw",
+  "repository": "suryamayaharum-droid/openclaw",
+  "role": "agent-runtime",
+  "capabilities": [
+    "agent-runtime",
+    "gateway",
+    "multi-agent-routing",
+    "skills",
+    "tools",
+    "messaging"
+  ],
+  "interfaces": {
+    "cli": "openclaw",
+    "gateway_port_default": 18789
+  },
+  "memory": {
+    "mode": "bridge",
+    "backend": "workspace-memory"
+  },
+  "health": [
+    {"type": "command", "argv": ["openclaw", "doctor"]}
+  ],
+  "metadata": {
+    "ecosystem": "MEAW",
+    "integration": "runtime-bridge",
+    "discovery_executes_commands": false
+  }
+}
